@@ -1,8 +1,7 @@
-import { Button, Typography } from "@material-ui/core";
+import { Button, Typography, useMediaQuery } from "@material-ui/core";
 import { makeStyles } from "@material-ui/styles";
 import React from "react";
 import { Link } from "react-router-dom";
-import { theme } from "../theme";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -11,9 +10,9 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: 1,
     display: "flex",
     alignItems: "center",
-    '&hover': {
+    "&hover": {
       backgroundColor: "transparent",
-    }
+    },
   },
   logo: {
     border: `1px solid ${theme.palette.common.black}`,
@@ -24,11 +23,17 @@ const useStyles = makeStyles((theme) => ({
   logoText: {
     fontWeight: "bold",
     lineHeight: 0.8,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "2.5rem",
+    },
   },
   title: {
     fontWeight: "bold",
     textAlign: "center",
     lineHeight: 1,
+    [theme.breakpoints.down("md")]: {
+      fontSize: "1.3rem",
+    },
   },
   subTitle: {
     textAlign: "center",
@@ -36,8 +41,12 @@ const useStyles = makeStyles((theme) => ({
     borderBottom: `1px solid ${theme.palette.common.black}`,
     borderTop: `1px solid ${theme.palette.common.black}`,
     fontSize: "1rem",
-    letterSpacing: ".2rem",
     fontWeight: "bold",
+    letterSpacing: "0.2rem",
+    [theme.breakpoints.down("md")]: {
+      fontSize: ".9rem",
+      letterSpacing: "0.15rem",
+    },
   },
 }));
 

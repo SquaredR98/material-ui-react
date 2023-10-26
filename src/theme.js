@@ -30,7 +30,8 @@ export const theme = createTheme({
         "-moz-linear-gradient(0deg, hsla(260, 29%, 36%, 1) 0%, hsla(205, 46%, 30%, 1) 100%)",
       background:
         "-webkit-linear-gradient(0deg, hsla(260, 29%, 36%, 1) 0%, hsla(205, 46%, 30%, 1) 100%)",
-      }
+      },
+      transition: 'background 1s ease-in-out'
     },
   },
   typography: {
